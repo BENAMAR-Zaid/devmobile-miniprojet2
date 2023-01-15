@@ -5,34 +5,34 @@
   android:layout_height="wrap_content">
 
   <TextView
-    android:id="@+id/employeeListItem_name"
+    android:id="@+id/commandListItem_name"
     android:textStyle="bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    android:text="Employee Name"
+    android:text="Command Name"
     android:textColor="@color/black"
     android:textSize="16sp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
   <TextView
-    android:id="@+id/employeeListItem_location"
+    android:id="@+id/commandListItem_description"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="20dp"
     android:paddingBottom="20dp"
-    android:text="Location"
+    android:text="Description"
     android:textSize="16sp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/employeeListItem_name" />
+    app:layout_constraintTop_toBottomOf="@id/commandListItem_name" />
 
   <TextView
-    android:id="@+id/employeeListItem_branch"
+    android:id="@+id/commandListItem_prix"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    android:text="Branch"
+    android:text="Prix"
     android:textSize="16sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
@@ -41,6 +41,6 @@
     android:layout_width="match_parent"
     android:layout_height="0.5dp"
     android:background="#C2C2C2"
-    app:layout_constraintTop_toBottomOf="@id/employeeListItem_location" />
+    app:layout_constraintTop_toBottomOf="@id/commandListItem_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

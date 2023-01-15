@@ -1,7 +1,12 @@
+/*
+    *
+    *
+    Realisé par : FAHAM Hassan et BENAMAR Zaid
+    *
+    *
+*/
 package com.genuinecoder.springserver;
 
-import com.genuinecoder.springserver.model.employee.Employee;
-import com.genuinecoder.springserver.model.employee.EmployeeDao;
 import java.util.List;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -10,20 +15,14 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.genuinecoder.springserver.model.command.Command;
+import com.genuinecoder.springserver.model.command.CommandDao;
+
 @SpringBootTest
 @TestInstance(Lifecycle.PER_CLASS)
 class SpringServerApplicationTests {
 
-  @Autowired
-  private EmployeeDao employeeDao;
-
-  @BeforeAll
-  public void clear() {
-    List<Employee> employees = employeeDao.getAllEmployees();
-    for (Employee employee : employees) {
-      employeeDao.delete(employee.getId());
-    }
-  }
+  private CommandDao employeeDao;
 
   @Test
   void addEmployeeTest() {
@@ -32,11 +31,11 @@ class SpringServerApplicationTests {
     addEmployee("Rachel", "Building-11", "IT");
   }
 
-  private void addEmployee(String name, String location, String branch) {
-    Employee employee = new Employee();
+  private void addEmployee(String name, String description, String prix) {
+    Command employee = new Command();
     employee.setName(name);
-    employee.setLocation(location);
-    employee.setBranch(branch);
+    employee.setDescription(description);
+    employee.setPrix(prix);
     employeeDao.save(employee);
   }
 

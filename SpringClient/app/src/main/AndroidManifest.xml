@@ -12,18 +12,24 @@
     android:usesCleartextTraffic="true">
     <activity
       android:exported="true"
-      android:label="Employee list"
-      android:name=".EmployeeListActivity" >
+      android:label="Command list"
+      android:name=".CommandListActivity" >
+    </activity>
+    <activity
+      android:exported="true"
+      android:name=".CommandForm"
+      android:label="Create new command"
+      android:parentActivityName=".CommandListActivity">
+    </activity>
+    <activity
+        android:exported="true"
+        android:name=".AuthentificationActivity"
+        android:label="Authentification"
+        android:parentActivityName=".AuthentificationActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
-    </activity>
-    <activity
-      android:exported="true"
-      android:name=".EmployeeForm"
-      android:label="Create new employee"
-      android:parentActivityName=".EmployeeListActivity">
     </activity>
   </application>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
