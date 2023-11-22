@@ -1,7 +1,3 @@
-
-## Realisé par : FAHAM Hassan et BENAMAR Zaid
-
-
 ### Page d'authentification
 ![1](https://user-images.githubusercontent.com/105943885/212571464-24ad3c01-a346-43b6-9ecc-ba06ea408bde.PNG)
 ### List view des commande disponible
